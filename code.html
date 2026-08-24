@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 9</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #eeeeee;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Question 9</h1>
+
+    <p>If one angle is 110°, what is the measure of an adjacent angle?</p>
+
+    <button onclick="answer('A')">A. 70°</button>
+    <button onclick="answer('B')">B. 90°</button>
+    <button onclick="answer('C')">C. 110°</button>
+    <button onclick="answer('D')">D. 180°</button>
+
+    <p id="result"></p>
+
+</div>
+
+<script>
+function answer(choice) {
+
+    let result = document.getElementById("result");
+
+    if (choice === "A") {
+        result.innerHTML = "Correct! Consecutive angles are supplementary: 110° + 70° = 180°.";
+    }
+    else if (choice === "B") {
+        result.innerHTML = "Not quite! The adjacent angle must add with 110° to make 180°.";
+    }
+    else if (choice === "C") {
+        result.innerHTML = "Nope! The opposite angle is 110°, but the adjacent angle is 70°.";
+    }
+    else {
+        result.innerHTML = "Not quite! 180° is the sum of the two consecutive angles.";
+    }
+}
+</script>
+
+</body>
+</html>
